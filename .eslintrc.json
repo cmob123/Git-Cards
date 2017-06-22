@@ -1,0 +1,29 @@
+{
+	"env": {
+		"node": true
+	},
+	"parserOptions": {
+		"ecmaVersion": 6,
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"extends": "eslint:recommended",
+	"rules": {
+		"eqeqeq": true,
+		"no-plusplus": true,
+		"no-await-in-loop": true,
+		"block-scoped-var": true,
+		"complexity": ["error", 10],
+		"curly": true,
+		"default-case": true,
+		"dot-location": true,
+		"dot-notation": true,
+		"guard-for-in": true,
+		"no-eval": true,
+		"no-implied-eval": true,
+		"no-loop-func": true,
+		"radix": true,
+		"vars-on-top": true
+	}
+}
