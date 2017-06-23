@@ -1,3 +1,5 @@
+// written by Chris O'Brien, June 2017
+
 const React = require("react");
 const Card = require("./Card");
 
@@ -11,4 +13,4 @@ const CardList = (props) => {
 	);
 };
 
-module.exports = CardList;
+module.exports = CardList; // export to App

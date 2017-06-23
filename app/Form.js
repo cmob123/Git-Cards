@@ -1,13 +1,11 @@
 const React = require("react");
-
-require("./style.less");
 const axios = require("axios");
 
 class Form extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = { userName: "" };
-		this.handleSubmit = (event) => {
+		this.handleSubmit = (event) => { // uses GitHub's API to retrieve data, then exports it to App
 			event.preventDefault(); // stop the form's onSubmit from reloading the page
 			axios.get("https://api.github.com/users/" + this.state.userName) // send AJAX request for user data
 				.then(resp => { // deal with fulfilled promise
@@ -32,4 +30,4 @@ class Form extends React.Component {
 	}
 }
 
-module.exports = Form;
+module.exports = Form; // export to App

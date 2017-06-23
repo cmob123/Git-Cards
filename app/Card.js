@@ -1,3 +1,5 @@
+// written by Chris O'Brien, June 2017
+
 const React = require("react");
 
 const Card = (props) => {
@@ -12,4 +14,4 @@ const Card = (props) => {
 	);
 };
 
-module.exports = Card;
+module.exports = Card; // export to App and CardList

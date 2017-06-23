@@ -1,10 +1,10 @@
+// written by Chris O'Brien, June 2017
+
 const React = require("react");
 const ReactDOM = require("react-dom");
-const axios = require("axios");
+const Form = require("./Form");
 const Card = require("./Card");
 const CardList = require("./CardList");
-const Form = require("./Form");
-
 require("./style.less");
 
 class App extends React.Component {
@@ -13,13 +13,14 @@ class App extends React.Component {
 		this.state = {
 			cards: []
 		};
-		this.addNewCard = (cardInfo) => {
+		this.addNewCard = (cardInfo) => { // adds card to list with data passed from Form
 			this.setState(prevState => ({
 				cards: prevState.cards.concat(cardInfo)
 			}));
-		}
+		};
 	}
-	render() {
+
+	render() { // put it all together
 		return (
 			<div>
 				<Form onSubmit={ (e) => this.addNewCard(e) }/>
